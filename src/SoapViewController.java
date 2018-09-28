@@ -33,12 +33,18 @@ public class SoapViewController implements Initializable {
         LiquidSoap soap4 = new LiquidSoap("Soft Soap", "Hand", 236, new Image("lemon.jpg"));
         LiquidSoap soap5 = new LiquidSoap("Murphys", "Floor", 473, new Image("murphys.jpg"));
 
+        //add soaps to choice box
         soapChoiceBox.getItems().add(soap1.toString());
         soapChoiceBox.getItems().add(soap2.toString());
         soapChoiceBox.getItems().add(soap3.toString());
         soapChoiceBox.getItems().add(soap4.toString());
         soapChoiceBox.getItems().add(soap5.toString());
 
-        
+        //default values
+        soapChoiceBox.setValue(soap1.toString());
+        imageView.setImage(soap1.getImage());
+        brandLabel.setText(soap1.getBrandName());
+        intendedUseLabel.setText(soap1.getIntendedUse());
+//        volumeLabel.setText(soap1.getVolume());
     }
 }
